@@ -1,0 +1,91 @@
+body {
+  font-family: "Lato";
+  background-color: rgb(225, 241, 255);
+  color: rgb(31, 31, 31);
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  text-decoration: solid;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:link {
+  color: white;
+}
+
+li a:visited {
+  color: white;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.kalimatpembuka {
+  font-size: larger;
+  border: #333;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  li {
+    float: none;
+    width: 100%;
+  }
+
+  li a {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

@@ -33,3 +33,38 @@ Route::get('blog', function () {
 });
 
 Route::get('hello', [DosenController::class, 'helloworld']);
+
+route::get('TugasLinktree', function () {
+    return view('linktree');
+});
+
+route :: get('Pertemuan4', function () {
+    return view('web');
+});
+
+route :: get('UTS', function () {
+    return view('index');
+});
+ route :: get('Pertemuan7_2', function () {
+    return view('js2');
+});
+
+route :: get('Pertemuan1', function () {
+    return view('pertama');
+});
+
+route :: get('Pertemuan2', function () {
+    return view('bootstrap1');
+});
+
+route :: get('Pertemuan3', function () {
+    return view('bootstrap2');
+});
+
+route :: get('Pertemuan7', function () {
+    return view('js1');
+});
+
+route :: get('FrontEnd', function () {
+    return view('list');
+});
