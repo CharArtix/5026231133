@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
 //use App\Http\Controllers\DosenController;
 //import
 
@@ -34,37 +36,60 @@ Route::get('blog', function () {
 
 Route::get('hello', [DosenController::class, 'helloworld']);
 
+//route tugas linktree
 route::get('TugasLinktree', function () {
     return view('linktree');
 });
 
-route :: get('Pertemuan4', function () {
+//route Pertemuan 4
+route::get('Pertemuan4', function () {
     return view('web');
 });
 
-route :: get('UTS', function () {
+//route UTS
+route::get('UTS', function () {
     return view('index');
 });
- route :: get('Pertemuan7_2', function () {
+
+//route Pertemuan 7 (js2)
+ route::get('Pertemuan7_2', function () {
     return view('js2');
 });
 
-route :: get('Pertemuan1', function () {
+//route Pertemuan 1
+route::get('Pertemuan1', function () {
     return view('pertama');
 });
 
-route :: get('Pertemuan2', function () {
+//route Pertemuan 2
+route::get('Pertemuan2', function () {
     return view('bootstrap1');
 });
 
-route :: get('Pertemuan3', function () {
+// route Pertemuan 3
+route::get('Pertemuan3', function () {
     return view('bootstrap2');
 });
 
-route :: get('Pertemuan7', function () {
+//route Pertemuan 7
+route::get('Pertemuan7', function () {
     return view('js1');
 });
 
-route :: get('FrontEnd', function () {
+// route List tugas
+route::get('FrontEnd', function () {
     return view('list');
 });
+
+route::get('dosen',[DosenController::class, 'index']);
+
+Route::get('/pegawai/{nama}',[PegawaiController::class, 'index']);
+
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
+// route blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
