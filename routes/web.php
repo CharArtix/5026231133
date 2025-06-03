@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PegawaiDB;
 //use App\Http\Controllers\DosenController;
 //import
 
@@ -48,7 +49,7 @@ route::get('Pertemuan4', function () {
 
 //route UTS
 route::get('UTS', function () {
-    return view('index');
+    return view('uts');
 });
 
 //route Pertemuan 7 (js2)
@@ -83,7 +84,7 @@ route::get('FrontEnd', function () {
 
 route::get('dosen',[DosenController::class, 'index']);
 
-Route::get('/pegawai/{nama}',[PegawaiController::class, 'index']);
+// Route::get('/pegawai/{nama}',[PegawaiController::class, 'index']);
 
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 
@@ -93,3 +94,15 @@ Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+route::get('/pegawai', [PegawaiDB::class, 'index']);
+
+Route::get('/pegawai/tambah',[PegawaiDB::class, 'tambah']);
+
+Route::post('/pegawai/store', [PegawaiDB::class, 'store']);
+
+Route::get('/pegawai/edit/{id}',[PegawaiDB::class, 'edit']);
+
+Route::post('/pegawai/update',[PegawaiDB::class, 'update']);
+
+Route::get('/pegawai/hapus/{id}',[PegawaiDB::class, 'hapus']);
