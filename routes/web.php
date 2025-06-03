@@ -94,15 +94,15 @@ Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
-
+//route pegawai
 route::get('/pegawai', [PegawaiDB::class, 'index']);
-
+//route tambah data
 Route::get('/pegawai/tambah',[PegawaiDB::class, 'tambah']);
-
+//route simpan data
 Route::post('/pegawai/store', [PegawaiDB::class, 'store']);
-
+//route edit data
 Route::get('/pegawai/edit/{id}',[PegawaiDB::class, 'edit']);
-
+//route update data
 Route::post('/pegawai/update',[PegawaiDB::class, 'update']);
-
+//route hapus data
 Route::get('/pegawai/hapus/{id}',[PegawaiDB::class, 'hapus']);
