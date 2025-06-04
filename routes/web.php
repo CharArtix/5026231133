@@ -106,3 +106,5 @@ Route::get('/pegawai/edit/{id}',[PegawaiDB::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDB::class, 'update']);
 //route hapus data
 Route::get('/pegawai/hapus/{id}',[PegawaiDB::class, 'hapus']);
+
+route::get('/pegawai/cari', [PegawaiDB::class, 'cari']);
