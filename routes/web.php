@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDB;
+use App\Http\Controllers\LaptopDB;
 //use App\Http\Controllers\DosenController;
 //import
 
@@ -94,6 +95,7 @@ Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
 //route pegawai
 route::get('/pegawai', [PegawaiDB::class, 'index']);
 //route tambah data
@@ -106,5 +108,20 @@ Route::get('/pegawai/edit/{id}',[PegawaiDB::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDB::class, 'update']);
 //route hapus data
 Route::get('/pegawai/hapus/{id}',[PegawaiDB::class, 'hapus']);
-
+//route cari data
 route::get('/pegawai/cari', [PegawaiDB::class, 'cari']);
+
+// route laptop
+route::get('/laptop', [LaptopDB::class, 'indexL']);
+// route tambah data
+Route::get('/laptop/tambah', [LaptopDB::class, 'tambahL']);
+// route simpan data
+Route::post('/laptop/store', [LaptopDB::class, 'storeL']);
+// route edit data
+Route::get('/laptop/edit/{id}', [LaptopDB::class, 'editL']);
+// route update data
+Route::post('/laptop/update', [LaptopDB::class, 'updateL']);
+// route hapus data
+Route::get('/laptop/hapus/{id}', [LaptopDB::class, 'hapusL']);
+// route cari data
+Route::get('/laptop/cari', [LaptopDB::class, 'cariL']);
