@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <title>Muhammad Rifqi Alfareza Santosa : 5026231133</title>
+    <title>5026231133-Muhammad Rifqi Alfareza Santosa</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
 
 <body>
     <div class="jumbotron text-center mx-auto">
-        <h1>5026231133 : Muhammad Rifqi Alfareza Santosa</h1>
+        <h1>5026231133-Muhammad Rifqi Alfareza Santosa</h1>
     </div>
 
     <nav class="navbar navbar-expand-sm bg-light">
@@ -32,16 +32,16 @@
                 <a class="nav-link" href="/pegawai">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/laptop">Tugas CRUD</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/laptop">Latihan 1</a>
+                <a class="nav-link" href="#">Latihan 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
+                <a class="nav-link" href="/pagecounter">Latihan 2</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Latihan 3</a>

@@ -15,14 +15,14 @@ class LaptopDB extends Controller
         $laptop = DB::table('laptop')->paginate(10);
 
     	// mengirim data pegawai ke view index
-    	return view('karyawan/indexL',['laptop' => $laptop]);
+    	return view('laptop/indexL',['laptop' => $laptop]);
 
     }
     // Menampilkan form tambah laptop
     public function tambahL()
     {
     	// memanggil view tambah
-    	return view('karyawan/tambahL');
+    	return view('laptop/tambahL');
     }
     // Menyimpan data laptop baru
     public function storeL(Request $request)
@@ -44,7 +44,7 @@ class LaptopDB extends Controller
     	$laptop = DB::table('laptop')->where('id',$id)->get();
 
     	// passing data pegawai yang didapat ke view edit
-    	return view('karyawan/editL',['laptop' => $laptop]);
+    	return view('laptop/editL',['laptop' => $laptop]);
     }
     // Memperbarui data laptop
     public function updateL(Request $request)
@@ -80,6 +80,6 @@ class LaptopDB extends Controller
             ->paginate();
 
         // mengirim data laptop ke view index
-        return view('karyawan/indexL', ['laptop' => $laptop]);
+        return view('laptop/indexL', ['laptop' => $laptop]);
     }
 }

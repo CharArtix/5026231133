@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDB;
 use App\Http\Controllers\LaptopDB;
+use App\Http\Controllers\pagecountercontroller;
+use App\Http\Controllers\KaryawanController;
 //use App\Http\Controllers\DosenController;
 //import
 
@@ -125,3 +127,11 @@ Route::post('/laptop/update', [LaptopDB::class, 'updateL']);
 Route::get('/laptop/hapus/{id}', [LaptopDB::class, 'hapusL']);
 // route cari data
 Route::get('/laptop/cari', [LaptopDB::class, 'cariL']);
+
+Route::get('/pagecounter', [pagecountercontroller::class, 'indexPC']);
+
+// Tugas pertemuan 15
+Route::get('/karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
+Route::get('/karyawan/tambah', [KaryawanController::class, 'create']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::delete('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
