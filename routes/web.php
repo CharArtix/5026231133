@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDB;
 use App\Http\Controllers\LaptopDB;
 use App\Http\Controllers\pagecountercontroller;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\KeranjangBelanjaController;
 //use App\Http\Controllers\DosenController;
 //import
 
@@ -135,3 +136,10 @@ Route::get('/karyawan', [KaryawanController::class, 'index'])->name('karyawan.in
 Route::get('/karyawan/tambah', [KaryawanController::class, 'create']);
 Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 Route::delete('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
+
+//route tugas pertemuan 15 keranjangbelanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'indexkeranjangbelanja']);
+Route::get('/keranjangbelanja/belikeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'belikeranjangbelanja']);
+Route::get('/keranjangbelanja/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
+Route::post('/keranjangbelanja/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
+Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
