@@ -9,6 +9,7 @@ use App\Http\Controllers\LaptopDB;
 use App\Http\Controllers\pagecountercontroller;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\nilaicontroller;
 //use App\Http\Controllers\DosenController;
 //import
 
@@ -143,3 +144,8 @@ Route::get('/keranjangbelanja/belikeranjangbelanja/{id}', [KeranjangBelanjaContr
 Route::get('/keranjangbelanja/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
 Route::post('/keranjangbelanja/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
 Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
+
+//route EAS
+Route::get('/eas', [nilaicontroller::class, 'index']);
+Route::get('/eas/tambah', [nilaicontroller::class, 'create']);
+Route::post('/eas/store', [nilaicontroller::class, 'store']);

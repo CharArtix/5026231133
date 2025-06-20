@@ -1,69 +1,64 @@
 @extends('template')
+
 @section('content')
-
-	<h3>Data Pegawai</h3>
-
-	<a href="/pegawai" class="btn btn-info"> Kembali</a>
-	<br/>
-	<br/>
-
-	<form action="/pegawai/store" method="post" class="form-horizontal">
+<div class="container mt-4">
+    <h3>Tambah Data nilai</h3>
+    <form action="/eas/store" method="post" class="form-horizontal">
         <!-- CSRF token untuk keamanan form -->
 		{{ csrf_field() }}
         <div class="form-group has-success">
                 <label class="control-label col-sm-2" for="nama">
-                    Nama
-                </label>
-                <div class="col-sm-6">
-                    <input class="form-control"
-                           type="text"
-                           id="nama"
-                           placeholder="Masukan nama lengkap"
-                           name="nama"
-                           required="required">
-                </div>
-            </div>
-            <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="jabatan">
-                    Jabatan
-                </label>
-                <div class="col-sm-6">
-                    <input class="form-control"
-                           type="text"
-                           id="jatan"
-                           placeholder="masukan jabatan"
-                           name="jabatan"
-                           required="required">
-                </div>
-            </div>
-            <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="umur">
-                    Umur
+                    id
                 </label>
                 <div class="col-sm-6">
                     <input class="form-control"
                            type="number"
-                           id="umur"
-                           placeholder="Masukan umur"
-                           name="umur"
+                           id="id"
+                           placeholder="Masukan id"
+                           name="id"
                            required="required">
                 </div>
             </div>
             <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="alamat">
-                    Alamat
+                <label class="control-label col-sm-2" for="nomorinduksiswa">
+                    NRP
                 </label>
                 <div class="col-sm-6">
                     <input class="form-control"
                            type="text"
-                           id="alamat"
-                           placeholder="Masukan alamat"
-                           name="alamat"
+                           id="nomorinduksiswa"
+                           placeholder="masukan nrp"
+                           name="nomorinduksiswa"
+                           required="required">
+                </div>
+            </div>
+            <div class="form-group has-success">
+                <label class="control-label col-sm-2" for="nilaiangka">
+                    Nilai Angka
+                </label>
+                <div class="col-sm-6">
+                    <input class="form-control"
+                           type="number"
+                           id="nilaiangka"
+                           placeholder="Masukan nilai angka"
+                           name="nilaiangka"
+                           required="required">
+                </div>
+            </div>
+            <div class="form-group has-success">
+                <label class="control-label col-sm-2" for="sks">
+                    SKS
+                </label>
+                <div class="col-sm-6">
+                    <input class="form-control"
+                           type="number"
+                           id="sks"
+                           placeholder="Masukan sks"
+                           name="sks"
                            required="required">
                 </div>
             </div>
 
 		<input type="submit" value="Simpan Data">
-	</form>
-
-    @endsection
+</div>
+@endsection
